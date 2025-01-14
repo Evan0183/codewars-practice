@@ -1,3 +1,4 @@
+# Number of months in 25 years
 MONTHS = 25 * 12
 
 students = []
