@@ -8,16 +8,12 @@ with open("2024-prob-14/input.txt") as file:
 
 numeric_data = []
 
-for i, value in enumerate(data):
-    is_number = True
-
-    for char in value:
-        if not(char.isdigit() or char == "."):
-            is_number = False
-            break
-
-    if is_number:
+for value in data:
+    try:
+        number = float(value)
         numeric_data.append(value)
+    except ValueError:
+        pass
 
 for i, value in enumerate(numeric_data):
     if i == len(numeric_data) - 1:
