@@ -48,6 +48,9 @@ sum_decimal_places = get_num_decimal_places(actual_sum)
 if sum_decimal_places < max_decimal_places:
     difference = max_decimal_places - sum_decimal_places
     actual_sum += "0" * difference
+elif sum_decimal_places > max_decimal_places:
+    difference = sum_decimal_places - max_decimal_places
+    actual_sum = actual_sum[:-difference - 1]
 
 if actual_sum == check_sum:
     print("CHECKED")
