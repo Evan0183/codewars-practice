@@ -1,9 +1,12 @@
+import os
+
+input_path = os.path.normpath(os.path.join(__file__, "..", "input.txt"))
 # Number of months in 25 years
 MONTHS = 25 * 12
 
 students = []
 
-with open("2024-prob-06/input.txt") as file:
+with open(input_path) as file:
     students = file.read().split("\n")
     students.pop(0)
     

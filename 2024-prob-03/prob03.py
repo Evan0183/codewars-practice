@@ -1,7 +1,10 @@
+import os
+
+input_path = os.path.normpath(os.path.join(__file__, "..", "input.txt"))
 # Read input from the file
 lines = []
 
-with open("2024-prob-03/input.txt") as file:
+with open(input_path) as file:
     lines = file.read().split("\n")
 
     for i, line in enumerate(lines):

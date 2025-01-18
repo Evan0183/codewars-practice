@@ -1,3 +1,7 @@
+import os
+
+input_path = os.path.normpath(os.path.join(__file__, "..", "input.txt"))
+
 def get_num_decimal_places(number):
     """
     Returns the number of decimal places in number.
@@ -25,7 +29,7 @@ data = []
 # Check sum value in the second line of input
 check_sum = 0
 
-with open("2024-prob-14/input.txt") as file:
+with open(input_path) as file:
     lines = file.read().split("\n")
     # Get the data from the first line
     data = lines[0].split(" ")
