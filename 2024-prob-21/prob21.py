@@ -47,6 +47,17 @@ def filter_characters(string, chars, include):
 for word in words:
     sort_grade = ""
 
+    # Check if the word is sorted
     if is_sorted(word):
         sort_grade = "SORTED"
+    # Check if all of the consonants in the word are sorted
+    elif is_sorted(filter_characters(word, VOWELS, False)):
+        sort_grade = "CON-SORTED"
+    # Check if all of the vowels in the word are sorted
+    elif is_sorted(filter_characters(word, VOWELS, True)):
+        sort_grade = "VOW-SORTED"
+    # Otherwise, the word is unsorted
+    else:
+        sort_grade = "UNSORTED"
     
+    print(f"{word} {sort_grade}")
