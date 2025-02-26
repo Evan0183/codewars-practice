@@ -10,6 +10,7 @@ with open(input_path) as file:
     for word in file.read().strip().split("\n"):
         word = word.strip()
 
+        # A "z" indicates the end of input, so stop reading input
         if word == "z":
             break
 
@@ -39,6 +40,8 @@ def filter_characters(string, chars, include):
     result_string = ""
 
     for char in string:
+        # Include each character in result_string based on if the character 
+        # is in chars and whether include is True or False
         if (char in chars and include) or (not char in chars and not include):
             result_string += char
     
