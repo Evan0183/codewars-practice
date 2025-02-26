@@ -1,10 +1,8 @@
-ghost
-sorted
-berry
-apple
-zebra
-smackers
-merry
-fix
-hippo
+who
+lives
+in
+apineapple
+under
+the
+sea
 z
